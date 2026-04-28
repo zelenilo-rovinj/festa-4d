@@ -16,199 +16,55 @@
     --subtext: #8b92a5;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    padding: 24px 16px 60px;
-  }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; padding: 24px 16px 60px; }
   header { text-align: center; margin-bottom: 32px; }
-  .badge {
-    display: inline-block;
-    background: var(--green);
-    color: #000;
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 100px;
-    margin-bottom: 14px;
-  }
-  h1 {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(26px, 6vw, 40px);
-    line-height: 1.1;
-    letter-spacing: -1px;
-  }
+  .badge { display: inline-block; background: var(--green); color: #000; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 14px; }
+  h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(26px, 6vw, 40px); line-height: 1.1; letter-spacing: -1px; }
   .subtitle { color: var(--subtext); font-size: 14px; margin-top: 6px; }
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 22px 0 28px;
-    flex-wrap: wrap;
-  }
-  .stat {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 14px 22px;
-    text-align: center;
-    min-width: 90px;
-    border: 1px solid #23273a;
-  }
-  .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 1;
-    color: var(--green);
-  }
+  .stats { display: flex; justify-content: center; gap: 20px; margin: 22px 0 28px; flex-wrap: wrap; }
+  .stat { background: var(--card); border-radius: 14px; padding: 14px 22px; text-align: center; min-width: 90px; border: 1px solid #23273a; }
+  .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 28px; line-height: 1; color: var(--green); }
   .stat-num.muted { color: var(--subtext); }
-  .stat-label {
-    font-size: 11px;
-    color: var(--subtext);
-    margin-top: 4px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .progress-wrap {
-    max-width: 480px;
-    margin: 0 auto 28px;
-    background: var(--card);
-    border: 1px solid #23273a;
-    border-radius: 14px;
-    padding: 16px 20px;
-  }
-  .progress-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--subtext);
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
+  .stat-label { font-size: 11px; color: var(--subtext); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .progress-wrap { max-width: 480px; margin: 0 auto 28px; background: var(--card); border: 1px solid #23273a; border-radius: 14px; padding: 16px 20px; }
+  .progress-title { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--subtext); margin-bottom: 10px; display: flex; justify-content: space-between; }
   .progress-title span { color: var(--green); }
-  .progress-bar-bg {
-    background: #23273a;
-    border-radius: 100px;
-    height: 10px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    background: var(--green);
-    height: 100%;
-    border-radius: 100px;
-    transition: width 0.4s cubic-bezier(.4,0,.2,1);
-    width: 0%;
-  }
-  .sync-status {
-    text-align: center;
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-  }
+  .progress-bar-bg { background: #23273a; border-radius: 100px; height: 10px; overflow: hidden; }
+  .progress-fill { background: var(--green); height: 100%; border-radius: 100px; transition: width 0.4s cubic-bezier(.4,0,.2,1); width: 0%; }
+  .sync-status { text-align: center; font-size: 11px; color: var(--muted); margin-bottom: 16px; letter-spacing: 0.5px; }
   .sync-status.online { color: var(--green); }
-  .list {
-    max-width: 480px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .person {
-    background: var(--card);
-    border: 1px solid #23273a;
-    border-radius: 14px;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    cursor: pointer;
-    transition: all 0.18s ease;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
+  .list { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
+  .person { background: var(--card); border: 1px solid #23273a; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: all 0.18s ease; user-select: none; -webkit-tap-highlight-color: transparent; }
   .person:active { transform: scale(0.98); }
-  .person.dolazi {
-    border-color: var(--green);
-    background: var(--green-glow);
-  }
-  .num {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--muted);
-    min-width: 24px;
-    text-align: right;
-  }
+  .person.dolazi { border-color: var(--green); background: var(--green-glow); }
+  .num { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; color: var(--muted); min-width: 24px; text-align: right; }
   .person.dolazi .num { color: var(--green); }
-  .name {
-    flex: 1;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .person.dolazi .name {
-    color: var(--green);
-    font-weight: 700;
-  }
-  .status-icon {
-    font-size: 20px;
-    min-width: 24px;
-    text-align: center;
-  }
-  .hint {
-    text-align: center;
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 30px;
-    letter-spacing: 0.5px;
-  }
+  .name { flex: 1; font-size: 15px; font-weight: 500; }
+  .person.dolazi .name { color: var(--green); font-weight: 700; }
+  .status-icon { font-size: 20px; min-width: 24px; text-align: center; }
+  .hint { text-align: center; color: var(--muted); font-size: 12px; margin-top: 30px; letter-spacing: 0.5px; }
 </style>
 </head>
 <body>
-
 <header>
   <div class="badge">23. svibnja</div>
   <h1>Fešta kod<br>barba Nikole 🎉</h1>
   <div class="subtitle">4.d — Tehničar za računalstvo</div>
 </header>
-
 <div class="stats">
-  <div class="stat">
-    <div class="stat-num" id="cnt-dolazi">0</div>
-    <div class="stat-label">Dolaze</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num muted" id="cnt-bez">0</div>
-    <div class="stat-label">Bez odgovora</div>
-  </div>
+  <div class="stat"><div class="stat-num" id="cnt-dolazi">0</div><div class="stat-label">Dolaze</div></div>
+  <div class="stat"><div class="stat-num muted" id="cnt-bez">0</div><div class="stat-label">Bez odgovora</div></div>
 </div>
-
 <div class="progress-wrap">
-  <div class="progress-title">
-    Odaziv razreda <span id="pct-odaziv">0%</span>
-  </div>
-  <div class="progress-bar-bg">
-    <div class="progress-fill" id="bar-dolazi"></div>
-  </div>
+  <div class="progress-title">Odaziv razreda <span id="pct-odaziv">0%</span></div>
+  <div class="progress-bar-bg"><div class="progress-fill" id="bar-dolazi"></div></div>
 </div>
-
 <div class="sync-status" id="sync-status">⏳ Spajanje...</div>
 <div class="list" id="list"></div>
 <p class="hint">Tapni ime za potvrdu dolaska</p>
-
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-
 const firebaseConfig = {
   apiKey: "AIzaSyDDM8DTLEyPdZtxLEBFBLHQ31PE6ZWjgG8",
   authDomain: "festa-4d.firebaseapp.com",
@@ -218,89 +74,49 @@ const firebaseConfig = {
   messagingSenderId: "218593916781",
   appId: "1:218593916781:web:a46c6307d381686a760c64"
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const stanjeRef = ref(db, 'stanje');
-
 const ucenici = [
-  { id:1,  ime:"Batel Toni" },
-  { id:2,  ime:"Brajković Benjamin" },
-  { id:3,  ime:"Budicin Sebastian" },
-  { id:4,  ime:"Čehić Ivan" },
-  { id:5,  ime:"Deković Boris" },
-  { id:6,  ime:"Glišić Aleksandar" },
-  { id:7,  ime:"Gostić Boris" },
-  { id:8,  ime:"Ivaštanin Silvio" },
-  { id:9,  ime:"Jadrejčić Tomica" },
-  { id:10, ime:"Juričević Saša" },
-  { id:11, ime:"Karović Marko" },
-  { id:12, ime:"Kos Dejan" },
-  { id:13, ime:"Kramarić Ivan" },
-  { id:14, ime:"Laginja Kristijan" },
-  { id:15, ime:"Malić Marko" },
-  { id:16, ime:"Matošević Aleksandar" },
-  { id:17, ime:"Miloš Luka" },
-  { id:18, ime:"Oršić Emanuel" },
-  { id:19, ime:"Poropat Patrik" },
-  { id:20, ime:"Pranjić Darko" },
-  { id:21, ime:"Rubbi Marko" },
-  { id:22, ime:"Sapundžić Ivan" },
-  { id:23, ime:"Stanić Damir" },
-  { id:24, ime:"Subotić Nikola 😤" },
-  { id:25, ime:"Šoštarić Davor" },
-  { id:26, ime:"Udovičić Nickol" },
-  { id:27, ime:"Vuković Jovica" },
-  { id:28, ime:"Wertheim Vincent" },
+  {id:1,ime:"Batel Toni"},{id:2,ime:"Brajković Benjamin"},{id:3,ime:"Budicin Sebastian"},
+  {id:4,ime:"Čehić Ivan"},{id:5,ime:"Deković Boris"},{id:6,ime:"Glišić Aleksandar"},
+  {id:7,ime:"Gostić Boris"},{id:8,ime:"Ivaštanin Silvio"},{id:9,ime:"Jadrejčić Tomica"},
+  {id:10,ime:"Juričević Saša"},{id:11,ime:"Karović Marko"},{id:12,ime:"Kos Dejan"},
+  {id:13,ime:"Kramarić Ivan"},{id:14,ime:"Laginja Kristijan"},{id:15,ime:"Malić Marko"},
+  {id:16,ime:"Matošević Aleksandar"},{id:17,ime:"Miloš Luka"},{id:18,ime:"Oršić Emanuel"},
+  {id:19,ime:"Poropat Patrik"},{id:20,ime:"Pranjić Darko"},{id:21,ime:"Rubbi Marko"},
+  {id:22,ime:"Sapundžić Ivan"},{id:23,ime:"Stanić Damir"},{id:24,ime:"Subotić Nikola 😤"},
+  {id:25,ime:"Šoštarić Davor"},{id:26,ime:"Udovičić Nickol"},{id:27,ime:"Vuković Jovica"},
+  {id:28,ime:"Wertheim Vincent"}
 ];
-
 let stanje = {};
-
 function render() {
   const list = document.getElementById('list');
   list.innerHTML = '';
   let dolazi = 0;
-
   ucenici.forEach(u => {
     const aktivan = !!stanje[u.id];
     if (aktivan) dolazi++;
-
     const div = document.createElement('div');
     div.className = 'person' + (aktivan ? ' dolazi' : '');
-    div.innerHTML =
-      '<span class="num">' + u.id + '.</span>' +
-      '<span class="name">' + u.ime + '</span>' +
-      '<span class="status-icon">' + (aktivan ? '✅' : '⬜') + '</span>';
-
+    div.innerHTML = '<span class="num">'+u.id+'.</span><span class="name">'+u.ime+'</span><span class="status-icon">'+(aktivan?'✅':'⬜')+'</span>';
     div.addEventListener('click', function() {
-      const novoStanje = !stanje[u.id];
-      const azuriranje = {};
-      azuriranje[u.id] = novoStanje;
-      update(stanjeRef, azuriranje);
+      const az = {}; az[u.id] = !stanje[u.id]; update(stanjeRef, az);
     });
-
     list.appendChild(div);
   });
-
-  const total = ucenici.length;
-  const pct = Math.round(dolazi / total * 100);
+  const pct = Math.round(dolazi/ucenici.length*100);
   document.getElementById('cnt-dolazi').textContent = dolazi;
-  document.getElementById('cnt-bez').textContent = total - dolazi;
-  document.getElementById('pct-odaziv').textContent = pct + '%';
-  document.getElementById('bar-dolazi').style.width = pct + '%';
+  document.getElementById('cnt-bez').textContent = ucenici.length - dolazi;
+  document.getElementById('pct-odaziv').textContent = pct+'%';
+  document.getElementById('bar-dolazi').style.width = pct+'%';
 }
-
-// Real-time listener
-onValue(stanjeRef, (snapshot) => {
-  stanje = snapshot.val() || {};
+onValue(stanjeRef, (snap) => {
+  stanje = snap.val() || {};
   document.getElementById('sync-status').textContent = '🟢 Sinkronizirano';
   document.getElementById('sync-status').className = 'sync-status online';
   render();
-}, (error) => {
-  document.getElementById('sync-status').textContent = '🔴 Nema veze';
-  document.getElementById('sync-status').className = 'sync-status';
 });
-
 render();
 </script>
 </body>
